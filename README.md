@@ -1,452 +1,239 @@
-Healthcare Data Analytics – Excel Project
+🏥 Healthcare Data Analytics — Excel
+End-to-end healthcare analytics project built in Microsoft Excel using 10,000 patient records.
 
-📊 Project Overview
 
-This project is an end-to-end Healthcare Data Analytics project built in Microsoft Excel using a dataset of 10,000 patient records.
 
-The objective is to transform raw healthcare data into meaningful business insights related to:
 
-Patient demographics
 
-Medical conditions
+📌 Project Snapshot
+This project turns raw healthcare records into structured, decision-oriented analysis using Excel data cleaning, feature engineering, statistics, PivotTables, and business insights.
 
-Hospital admissions
+Metric	Result
+👥 Patient records	10,000
+🩺 Medical conditions	6
+🏦 Insurance providers	5
+📅 Years covered	2018–2023
+💰 Average billing	~23,381
+🏥 Average stay	13.82 days
+⏱️ Maximum stay	30 days
+📊 Visual Dashboard
 
-Insurance providers
 
-Billing amounts
+🔍 Key Visualizations
+1. Medical Condition Distribution
 
-Length of hospital stay
 
-Gender and age-group patterns
+What it shows: patient volume across the six medical-condition categories.
 
-Medical-condition distribution
+Hypertension: 2,155
 
-Insurance and billing analysis
+Cancer: 1,647
 
-The project demonstrates practical Excel skills including data cleaning, feature engineering, formulas, PivotTables, statistical analysis, and analytical storytelling.
+Obesity: 1,627
 
-🎯 Business Objectives
+Arthritis: 1,587
 
-The analysis was designed to answer questions such as:
+Asthma: 1,550
 
-Which medical conditions are most common?
+Diabetes: 1,434
 
-How are patients distributed across age groups and genders?
+2. Insurance Provider Analysis
 
-Which hospitals have the highest number of patients?
 
-How are patients distributed across insurance providers?
+What it shows: patient distribution across the five insurance providers.
 
-What is the average billing amount?
+Medicare: 2,428
 
-Does the length of stay have a relationship with billing amount?
+Cigna: 1,939
 
-How do billing amounts differ across medical conditions?
+Aetna: 1,921
 
-How are medical conditions distributed across insurance providers?
+Blue Cross: 1,875
 
-How do medical conditions vary by gender?
+UnitedHealthcare: 1,837
 
-How has patient volume changed over the years?
+3. Average Billing by Medical Condition
 
-🗂️ Dataset
 
-Records: 10,000 patients
+What it shows: how average billing differs across medical conditions.
 
-Original columns: 15
+Medical Condition	Avg. Billing
+Cancer	~39,677
+Diabetes	~30,070
+Asthma	~22,645
+Arthritis	~20,055
+Hypertension	~17,643
+Obesity	~12,536
+4. Patient Volume by Year
 
-Final analytical columns: 22
 
-Time period: 2018–2023
+The analysis tracks admissions from 2018 through 2023, allowing year-wise patient-volume comparison.
 
-Main fields
+5. Demographic Analysis
 
-Category
 
-Fields
-
-Patient
-
-Name, Age, Gender, Blood Type
-
-Medical
-
-Medical Condition, Medication, Test Results
-
-Hospital
-
-Hospital, Doctor, Room Number
-
-Admission
-
-Date of Admission, Admission Type, Discharge Date
-
-Financial
-
-Billing Amount
-
-Insurance
-
-Insurance Provider
-
-Derived Features
-
-Age Bucket, Demographic Group, Duration of Stay, Year, Month, Day, Month Name
-
-🧹 Data Preparation
-
-The raw dataset was transformed into an analysis-ready sheet.
-
-Data preparation steps
-
-Cleaned inconsistent text/category values
-
-Standardized medical-condition names
-
-Standardized admission-type values
-
-Converted numeric fields to proper numeric format
-
-Converted date fields to usable date formats
-
-Calculated Duration of Stay
-
-Extracted Year, Month, Day, and Month Name
-
-Created Age Bucket
-
-Created combined Demographic Group fields such as Senior-Female and Middle-Male
-
-Structured the dataset for PivotTable analysis
-
-🧮 Feature Engineering
-
-Additional analytical fields were created to make the dataset easier to analyze.
-
-Duration of Stay
-
-Duration of Stay = Discharge Date - Date of Admission
-
-Age Bucket
-
-Patients were grouped into:
-
-Young
-
-Middle
-
-Senior
-
-Demographic Group
-
-Gender and age bucket were combined to create groups such as:
+Medical conditions were analyzed across combined demographic groups such as:
 
 Young-Female
+
 Young-Male
+
 Middle-Female
+
 Middle-Male
+
 Senior-Female
+
 Senior-Male
 
-Date Features
+🎯 Business Questions Answered
+The workbook was designed to answer:
 
-The admission date was broken into:
+Which medical conditions have the highest patient volume?
+
+How are patients distributed by age and gender?
+
+Which insurance providers cover the largest number of patients?
+
+Which medical conditions have higher average billing?
+
+How does billing vary across insurance providers?
+
+How does hospitalization duration vary across patients?
+
+How does average billing change with length of stay?
+
+How does patient volume change across admission years?
+
+How do medical conditions differ across demographic groups?
+
+How do medical conditions compare across insurance providers?
+
+🧹 Data Preparation & Feature Engineering
+The raw dataset was transformed into an analysis-ready dataset.
+
+Cleaning
+Standardized categorical values
+
+Cleaned numeric billing fields
+
+Standardized date fields
+
+Checked the dataset structure and consistency
+
+Feature Engineering
+Created additional analytical fields:
+
+Duration of Stay = Discharge Date − Date of Admission
+Age Bucket → Young / Middle / Senior
+Demographic Group → Age Bucket + Gender
+Date features:
 
 Year
-
 Month
-
 Day
-
 Month Name
+📈 Excel Analysis
+PivotTable Analysis
+The workbook uses PivotTables to analyze:
 
-📈 Analysis Performed
-
-1. Patient & Medical Condition Analysis
-
-Analyzed patient counts by:
-
-Medical condition
-
-Gender
-
-Age bucket
-
-Blood type
-
-Hospital
-
-The analysis identifies the distribution of major conditions including:
-
-Hypertension
-
-Cancer
-
-Obesity
-
-Arthritis
-
-Asthma
-
-Diabetes
-
-2. Demographic Analysis
-
-Analyzed how medical conditions are distributed across:
-
-Young / Middle / Senior patients
-
-Male / Female patients
-
-Combined demographic groups
-
-This helps identify demographic patterns in patient conditions.
-
-3. Insurance Provider Analysis
-
-Compared insurance providers based on:
-
-Number of patients
-
-Percentage of total patients
-
-Average billing amount
-
-Insurance providers included:
-
-Medicare
-
-UnitedHealthcare
-
-Aetna
-
-Cigna
-
-Blue Cross
-
-4. Billing Analysis
-
-Analyzed billing amounts using:
-
-Average billing amount
-
-Medical condition
-
-Insurance provider
-
-Patient demographics
-
-Duration of stay
-
-The overall average billing amount in the analytical dataset is approximately 23,381.
-
-5. Length of Stay Analysis
-
-Calculated the duration of each hospital stay and analyzed:
-
-Patient count by stay duration
-
-Average billing amount by stay duration
-
-Billing differences across stay durations
-
-This analysis was used to investigate whether hospitalization duration is associated with billing amount.
-
-Note: This is an observational Excel analysis and does not establish causation.
-
-6. PivotTable Analysis
-
-PivotTables were used extensively to summarize:
-
-Patient counts
-
-Medical conditions
+Medical condition distribution
 
 Gender distribution
 
-Age groups
-
-Blood types
-
-Insurance providers
-
-Year-wise patient volume
-
-Condition vs demographic relationships
-
-Condition vs insurance relationships
-
-Billing metrics
-
-📊 Key Dataset Statistics
-
-Metric
-
-Value
-
-Total Patients
-
-10,000
-
-Medical Conditions
-
-6
-
-Insurance Providers
-
-5
-
-Admission Types
-
-3
-
-Test Result Categories
-
-3
-
-Medications
-
-5
-
-Age Groups
-
-3
-
-Years Covered
-
-2018–2023
-
-Average Billing Amount
-
-~23,381
-
-Average Duration of Stay
-
-~13.82 days
-
-Maximum Duration of Stay
-
-30 days
-
-🛠️ Excel Skills Demonstrated
-
-This project demonstrates practical skills in:
-
-Data Cleaning
-
-Data Transformation
-
-Excel Tables
-
-Data Validation / Standardization
-
-IF / nested logic
-
-Date calculations
-
-Text standardization
-
-Feature Engineering
-
-PivotTables
-
-Pivot Charts
-
-COUNTIF / COUNTIFS
-
-SUMIF / SUMIFS
-
-AVERAGEIF / AVERAGEIFS
-
-Percentage calculations
-
-Descriptive Statistics
-
-Comparative Analysis
-
-Business Insight Generation
-
-Dashboard-style analytical reporting
-
-📁 Workbook Structure
-
-Raw_Data
-
-Original healthcare dataset.
-
-Healthcare
-
-Cleaned and transformed analytical dataset containing derived features.
-
-Sheet5
-
-Working/analysis sheet derived from the cleaned dataset.
-
-Sample Sales Analysis
-
-PivotTable-based exploratory analysis including:
+Blood type distribution
 
 Hospital patient counts
 
-Medical-condition counts
-
-Gender distribution
-
-Blood-group distribution
+Insurance providers
 
 Year-wise patient volume
 
-Age-group vs medical-condition analysis
+Demographic × medical-condition relationships
 
-Advance analysis
+Insurance × medical-condition relationships
 
-Advanced analytical work including:
+Statistical Analysis
+The project also uses descriptive analysis for:
 
-Age-group vs medical-condition analysis
+Mean billing amount
 
-Gender distribution by medical condition
+Mean duration of stay
 
-Blood-group vs medical-condition analysis
+Patient counts
 
-Insurance-provider analysis
+Category distributions
 
-Insurance-provider billing analysis
+Group comparisons
 
-Medical-condition billing comparison
+Billing comparisons
 
-Duration-of-stay analysis
+🛠️ Excel Skills Demonstrated
+Data Cleaning · Data Transformation · Feature Engineering · PivotTables · Pivot Analysis · COUNTIF/COUNTIFS · SUMIF/SUMIFS · AVERAGEIF/AVERAGEIFS · Date Functions · Conditional Logic · Descriptive Statistics · Business Analysis · Data Visualization
 
-Billing comparison by stay duration
+📂 Workbook Structure
+Healthcare_Data_Analytics.xlsx
+│
+├── Raw_Data
+│   └── Original healthcare records
+│
+├── Healthcare
+│   └── Cleaned dataset + engineered features
+│
+├── Sheet5
+│   └── Supporting analysis
+│
+├── Sample Sales Analysis
+│   └── PivotTable-based exploratory analysis
+│
+└── Advance analysis
+    └── Advanced demographic, insurance,
+        billing and length-of-stay analysis
+💡 Example Business Insights
+Patient volume
+Hypertension is the largest medical-condition category in the dataset with 2,155 patients.
 
-💡 Business Insights
+Billing
+Cancer has the highest average billing amount among the six medical-condition categories at approximately 39,677.
 
-The workbook can be used to communicate insights such as:
+Insurance
+Medicare represents the largest patient group among the five insurance providers with 2,428 patients.
 
-Patient volume can be compared across years to understand changes in healthcare demand.
+Hospitalization
+The average hospitalization duration is approximately 13.82 days, with stays ranging from 0 to 30 days.
 
-Medical conditions can be examined across age and gender groups to identify demographic patterns.
+These are descriptive observations from the dataset. They do not establish medical or causal relationships.
 
-Insurance providers can be compared using both patient volume and average billing amount.
+🚀 What I Learned
+Through this project, I practiced an end-to-end analytics workflow:
 
-Billing amounts can be analyzed across medical conditions and hospitalization duration.
+Raw Data
+   ↓
+Data Cleaning
+   ↓
+Feature Engineering
+   ↓
+Exploratory Analysis
+   ↓
+PivotTables
+   ↓
+Statistics
+   ↓
+Visualizations
+   ↓
+Business Insights
+This project strengthened my practical skills in Excel-based data analysis and business storytelling.
 
-PivotTable analysis makes it easier for healthcare managers to explore patient and financial patterns.
+📁 Project Files
+📊 Healthcare_Data_Analytics.xlsx — complete Excel analysis
 
-📌 Important Note
+📖 README.md — project documentation
 
-This project is intended for portfolio and educational data-analysis purposes.
-
-The dataset is analyzed statistically and should not be interpreted as medical advice or as evidence of clinical causation.
+📈 healthcare_github_assets/ — project visualizations
 
 👩‍💻 Author
-
 Sonam Gupta
+Aspiring Data Analyst | Excel | SQL | Python | Data Analytics | Machine Learning
 
-Skills
+⭐ If you find this project useful, feel free to explore the workbook and analysis.
 
-Microsoft Excel Data Analytics Data Cleaning PivotTables Statistics Data Visualization Business Analysis
-
-⭐ Project Highlights
-
-10,000+ healthcare records | Data Cleaning | Feature Engineering | Statistics | PivotTables | Advanced Excel Analysis | Healthcare Analytics
