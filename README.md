@@ -1,239 +1,379 @@
-🏥 Healthcare Data Analytics — Excel
-End-to-end healthcare analytics project built in Microsoft Excel using 10,000 patient records.
+🏥 Healthcare Data Analytics & Excel Dashboard
+
+An end-to-end Excel analytics project focused on patient demographics, medical conditions, admissions, insurance, billing, and length-of-stay analysis.
 
 
 
 
 
-📌 Project Snapshot
-This project turns raw healthcare records into structured, decision-oriented analysis using Excel data cleaning, feature engineering, statistics, PivotTables, and business insights.
 
-Metric	Result
-👥 Patient records	10,000
-🩺 Medical conditions	6
-🏦 Insurance providers	5
-📅 Years covered	2018–2023
-💰 Average billing	~23,381
-🏥 Average stay	13.82 days
-⏱️ Maximum stay	30 days
-📊 Visual Dashboard
+📌 Project Overview
 
+This project analyzes a 10,000-record healthcare dataset to understand patient demographics, medical conditions, admission patterns, insurance distribution, hospital billing, and length of stay.
 
-🔍 Key Visualizations
+The workbook combines data cleaning, feature creation, pivot-based analysis, advanced Excel calculations, KPI analysis, and dashboard-style visualizations to convert raw healthcare records into actionable insights.
+
+🎯 Business Questions
+
+The analysis was designed around questions such as:
+
+Which medical conditions occur most frequently?
+
+Which conditions have the highest average billing?
+
+How have patient admissions changed over the years?
+
+Which admission type is most common?
+
+How are patients distributed across insurance providers?
+
+What is the typical patient billing amount?
+
+Does length of stay show a meaningful relationship with billing?
+
+How do patient demographics differ across conditions?
+
+How can insurance providers be compared using patient volume and billing metrics?
+
+📊 Dataset Snapshot
+
+Metric
+
+Value
+
+Total patient records
+
+10,000
+
+Average billing amount
+
+23,381.11
+
+Median billing amount
+
+20,280.00
+
+Average length of stay
+
+13.82 days
+
+Female patients
+
+50.7%
+
+Male patients
+
+49.2%
+
+Emergency admissions
+
+35.9%
+
+Highest-volume condition
+
+Hypertension (2,155)
+
+Highest average billing condition
+
+Cancer (39,676.54)
+
+Most represented insurer
+
+Medicare (2,428)
+
+Peak admission year
+
+2021 (2,063 records)
+
+Note: Monetary values are presented in the dataset's original units; the workbook does not specify a currency.
+
+🧰 Tools & Skills
+
+Core Tools
+
+Microsoft Excel
+
+Pivot Tables
+
+Pivot Charts
+
+Excel formulas
+
+Data cleaning
+
+Exploratory Data Analysis (EDA)
+
+Dashboard design
+
+Business-oriented data storytelling
+
+Excel Techniques
+
+COUNTIF / COUNTIFS
+
+SUMIF / SUMIFS
+
+AVERAGEIF / AVERAGEIFS
+
+MINIFS / MAXIFS
+
+Date and time functions
+
+Conditional formatting
+
+PivotTable aggregation
+
+Grouping and categorization
+
+Percentage calculations
+
+Cross-tabulation
+
+Trend analysis
+
+🔄 Analysis Workflow
+
+                 RAW HEALTHCARE DATA
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ Data Inspection  │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ Data Cleaning    │
+                │ & Standardizing  │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ Feature Creation │
+                │ Age Bucket       │
+                │ Year / Month     │
+                │ Stay Duration    │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ Pivot Analysis   │
+                │ & KPIs           │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ Visualization    │
+                │ & Dashboard      │
+                └────────┬────────┘
+                         │
+                         ▼
+                 BUSINESS INSIGHTS
+
+📈 Visual Analysis
+
 1. Medical Condition Distribution
 
-
-What it shows: patient volume across the six medical-condition categories.
-
-Hypertension: 2,155
-
-Cancer: 1,647
-
-Obesity: 1,627
-
-Arthritis: 1,587
-
-Asthma: 1,550
-
-Diabetes: 1,434
-
-2. Insurance Provider Analysis
+The condition distribution shows Hypertension as the largest patient category in this dataset.
 
 
-What it shows: patient distribution across the five insurance providers.
 
-Medicare: 2,428
+2. Average Billing by Medical Condition
 
-Cigna: 1,939
-
-Aetna: 1,921
-
-Blue Cross: 1,875
-
-UnitedHealthcare: 1,837
-
-3. Average Billing by Medical Condition
+Average billing differs substantially across conditions. Cancer has the highest average billing in this dataset.
 
 
-What it shows: how average billing differs across medical conditions.
 
-Medical Condition	Avg. Billing
-Cancer	~39,677
-Diabetes	~30,070
-Asthma	~22,645
-Arthritis	~20,055
-Hypertension	~17,643
-Obesity	~12,536
-4. Patient Volume by Year
+3. Patient Admissions Over Time
+
+The yearly trend shows how the number of records changes across the available admission years, with the highest recorded volume occurring in 2021.
 
 
-The analysis tracks admissions from 2018 through 2023, allowing year-wise patient-volume comparison.
 
-5. Demographic Analysis
+4. Admission Type Analysis
+
+Emergency admissions represent the largest admission category, followed by urgent and elective admissions.
 
 
-Medical conditions were analyzed across combined demographic groups such as:
 
-Young-Female
+5. Insurance Provider Distribution
 
-Young-Male
+The analysis compares patient volume across the five insurance providers represented in the dataset.
 
-Middle-Female
 
-Middle-Male
 
-Senior-Female
+6. Length of Stay vs Billing
 
-Senior-Male
+A scatter analysis was used to examine whether longer hospital stays correspond to higher billing amounts.
 
-🎯 Business Questions Answered
-The workbook was designed to answer:
+The Pearson correlation in this dataset is approximately -0.003, indicating very little linear relationship between these two variables.
 
-Which medical conditions have the highest patient volume?
 
-How are patients distributed by age and gender?
 
-Which insurance providers cover the largest number of patients?
+Correlation does not establish causation. Other factors such as medical condition, treatment, medication, and admission characteristics may contribute to billing.
 
-Which medical conditions have higher average billing?
+🔎 Key Insights
 
-How does billing vary across insurance providers?
+🩺 Patient Mix
 
-How does hospitalization duration vary across patients?
+Hypertension is the most frequently represented medical condition with 2,155 records.
 
-How does average billing change with length of stay?
+The dataset contains six major medical conditions.
 
-How does patient volume change across admission years?
+Female patients account for approximately 50.7% of the records, while male patients account for 49.2%.
 
-How do medical conditions differ across demographic groups?
+💰 Billing
 
-How do medical conditions compare across insurance providers?
+Average billing is approximately 23,381.11.
 
-🧹 Data Preparation & Feature Engineering
-The raw dataset was transformed into an analysis-ready dataset.
+Median billing is approximately 20,280.00.
 
-Cleaning
-Standardized categorical values
+Cancer has the highest average billing amount among the medical conditions.
 
-Cleaned numeric billing fields
+🏥 Admissions
 
-Standardized date fields
+Emergency is the most common admission type.
 
-Checked the dataset structure and consistency
+Emergency admissions account for approximately 35.9% of all records.
 
-Feature Engineering
-Created additional analytical fields:
+The highest annual record volume occurs in 2021.
 
-Duration of Stay = Discharge Date − Date of Admission
-Age Bucket → Young / Middle / Senior
-Demographic Group → Age Bucket + Gender
-Date features:
+🛡️ Insurance
+
+Medicare has the largest patient count among the insurance providers.
+
+Insurance providers can be compared using both patient volume and average billing rather than relying on a single metric.
+
+⏱️ Length of Stay
+
+Average length of stay is 13.82 days.
+
+The correlation between length of stay and billing is approximately -0.003, so the dataset does not show a strong linear relationship between these variables.
+
+📋 Workbook Structure
+
+The original Excel workbook contains multiple analytical sheets:
+
+Sheet
+
+Purpose
+
+Healthcare
+
+Cleaned/analysis-ready healthcare dataset with calculated fields
+
+Raw_Data
+
+Raw source data
+
+Sheet5
+
+Additional working/analysis data
+
+Sample Sales Analysis
+
+Pivot-style summary analysis
+
+Advance analysis
+
+Advanced cross-tabulations, billing analysis, insurance analysis and relationship analysis
+
+Important calculated fields
+
+The analysis-ready sheet includes derived fields such as:
+
+Age Bucket
+
+Demographic columns
+
+Duration of stay
 
 Year
+
 Month
+
 Day
+
 Month Name
-📈 Excel Analysis
-PivotTable Analysis
-The workbook uses PivotTables to analyze:
 
-Medical condition distribution
+📊 KPI Dashboard Concept
 
-Gender distribution
+The dashboard is designed around five major KPI areas:
 
-Blood type distribution
+┌────────────────┬────────────────┬────────────────┐
+│ Total Patients │ Avg Billing    │ Avg Stay       │
+│    10,000      │   23,381.11    │   13.82 days   │
+└────────────────┴────────────────┴────────────────┘
 
-Hospital patient counts
+┌────────────────┬────────────────┬────────────────┐
+│ Top Condition  │ Top Insurance  │ Peak Year      │
+│  Hypertension  │    Medicare    │     2021       │
+└────────────────┴────────────────┴────────────────┘
 
-Insurance providers
+These KPIs provide a quick executive-level summary before moving into detailed analysis.
 
-Year-wise patient volume
+💡 Why This Project Matters
 
-Demographic × medical-condition relationships
+This project demonstrates how raw healthcare records can be transformed into a structured analytical solution.
 
-Insurance × medical-condition relationships
+Instead of only creating charts, the project follows a business-analysis approach:
 
-Statistical Analysis
-The project also uses descriptive analysis for:
+Raw Data → Cleaning → Feature Engineering → KPI Creation → Segmentation → Trend Analysis → Visualization → Insights
 
-Mean billing amount
+This makes the project suitable for demonstrating practical skills for Data Analyst / Business Analyst / Excel Analyst roles.
 
-Mean duration of stay
+🚀 Possible Future Improvements
 
-Patient counts
+Build an interactive Excel dashboard with slicers
 
-Category distributions
+Add month-over-month admission trends
 
-Group comparisons
+Add condition × insurance heatmaps
 
-Billing comparisons
+Analyze medication patterns
 
-🛠️ Excel Skills Demonstrated
-Data Cleaning · Data Transformation · Feature Engineering · PivotTables · Pivot Analysis · COUNTIF/COUNTIFS · SUMIF/SUMIFS · AVERAGEIF/AVERAGEIFS · Date Functions · Conditional Logic · Descriptive Statistics · Business Analysis · Data Visualization
+Add doctor/hospital performance analysis
 
-📂 Workbook Structure
-Healthcare_Data_Analytics.xlsx
+Create a billing segmentation model
+
+Add automated KPI refresh using Power Query
+
+Rebuild the dashboard in Power BI
+
+Build the same analysis using Python + Pandas
+
+Add statistical testing and hypothesis analysis
+
+Explore relationships between medical condition, stay duration, and billing
+
+📁 Recommended GitHub Structure
+
+Healthcare-Data-Analytics/
 │
-├── Raw_Data
-│   └── Original healthcare records
+├── README.md
 │
-├── Healthcare
-│   └── Cleaned dataset + engineered features
+├── data/
+│   └── healthcare_dataset.xlsx
 │
-├── Sheet5
-│   └── Supporting analysis
+├── visualizations/
+│   ├── 01_condition_distribution.png
+│   ├── 02_avg_billing_condition.png
+│   ├── 03_admissions_by_year.png
+│   ├── 04_admission_type.png
+│   ├── 05_insurance_distribution.png
+│   └── 06_stay_vs_billing.png
 │
-├── Sample Sales Analysis
-│   └── PivotTable-based exploratory analysis
-│
-└── Advance analysis
-    └── Advanced demographic, insurance,
-        billing and length-of-stay analysis
-💡 Example Business Insights
-Patient volume
-Hypertension is the largest medical-condition category in the dataset with 2,155 patients.
+└── dashboard/
+    └── healthcare_dashboard.xlsx
 
-Billing
-Cancer has the highest average billing amount among the six medical-condition categories at approximately 39,677.
-
-Insurance
-Medicare represents the largest patient group among the five insurance providers with 2,428 patients.
-
-Hospitalization
-The average hospitalization duration is approximately 13.82 days, with stays ranging from 0 to 30 days.
-
-These are descriptive observations from the dataset. They do not establish medical or causal relationships.
-
-🚀 What I Learned
-Through this project, I practiced an end-to-end analytics workflow:
-
-Raw Data
-   ↓
-Data Cleaning
-   ↓
-Feature Engineering
-   ↓
-Exploratory Analysis
-   ↓
-PivotTables
-   ↓
-Statistics
-   ↓
-Visualizations
-   ↓
-Business Insights
-This project strengthened my practical skills in Excel-based data analysis and business storytelling.
-
-📁 Project Files
-📊 Healthcare_Data_Analytics.xlsx — complete Excel analysis
-
-📖 README.md — project documentation
-
-📈 healthcare_github_assets/ — project visualizations
+If the workbook contains any real/personal patient information, do not upload it publicly. Use an anonymized or synthetic dataset instead.
 
 👩‍💻 Author
-Sonam Gupta
-Aspiring Data Analyst | Excel | SQL | Python | Data Analytics | Machine Learning
 
-⭐ If you find this project useful, feel free to explore the workbook and analysis.
+Sonam Gupta
+
+B.Sc. Computer Science | Aspiring Data Analyst / AI & ML Professional
+
+⭐ Project Highlights
+
+10,000+ records • Healthcare analytics • Excel • PivotTables  • EDA • Dashboarding • Business insights • Data visualization
 
